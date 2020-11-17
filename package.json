@@ -1,0 +1,23 @@
+{
+  "name": "MedSolace-CaseLog-Web-QA",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZetaTech-Solutions/MedSolace-CaseLog-Web-QA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZetaTech-Solutions/MedSolace-CaseLog-Web-QA/issues"
+  },
+  "homepage": "https://github.com/ZetaTech-Solutions/MedSolace-CaseLog-Web-QA#readme",
+  "dependencies": {
+    "cypress": "^5.6.0"
+  }
+}
