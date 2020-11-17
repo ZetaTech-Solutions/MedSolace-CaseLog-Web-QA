@@ -1,4 +1,4 @@
-import Login from '../pageObjectsCaseLog/loginCaseLog'
+import Login from '../pageObjects/loginCaseLog'
 
 describe('Login', function(){
     const login = new Login()
@@ -7,7 +7,7 @@ describe('Login', function(){
         cy.server()
         cy.route('POST', '/api/v1/user/Login').as('login')
         cy.route('PUT', '/api/v1/user/logout').as('logout')
-        cy.visit('http://s2cript.azurewebsites.net/')
+        cy.visit('http://dev-caselog.medsolace.com/')
         
     cy.fixture('userLoginDetailsCaseLog').then((user)=>{
         login.signInButton().should('be.visible').click()
