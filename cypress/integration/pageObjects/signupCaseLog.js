@@ -19,7 +19,7 @@ class signUp {
     SelectCountry(){
 
     }
-    
+
     passwordInput(){
 
     }
@@ -44,6 +44,10 @@ class signUp {
     }
 
     acceptButton(){
+        
+    }
+    
+    resendemail(){
         
     }
 
