@@ -17,6 +17,7 @@ describe('Sign Up', function () {
                 signup.lastNameInput().type(user.lastName)
                 signup.emailInput().type(user.Email)
                 signup.phonenumberInput().type(user.phonenumber)
+                signup.SelectCountry().type(user.phonenumber)
                 signup.passwordInput().type(user.password)
                 signup.confirmPasswordInput().type(user.confirmPassword)
                 signup.nextButton().should('be.visible').click()
