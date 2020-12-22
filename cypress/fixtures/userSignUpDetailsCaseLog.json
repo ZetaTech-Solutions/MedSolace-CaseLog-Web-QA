@@ -10,7 +10,8 @@
     "wrongconfirmPasswordMessage":"",
     "phonenumber": "0592288622" ,
     "invalidphonenumber":"879",
-    "invalidphonenumberMessage":""
+    "invalidphonenumberMessage":"",
+    "invalidpassword":"1"
   }
 
  
