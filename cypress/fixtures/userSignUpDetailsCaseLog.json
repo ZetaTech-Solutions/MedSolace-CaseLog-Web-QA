@@ -3,10 +3,14 @@
     "lastName": "Abdoh",
     "Email": "shuaamunther123@gmail.com",
     "invalidEmail": "shuaa",
+    "invalidEmailMessage":"",
     "password": "1234qwer",
     "confirmPassword": "1234qwer",
     "wrongconfirmPassword": "12345qwerr",
-    "phonenumber": "0592288622" 
+    "wrongconfirmPasswordMessage":"",
+    "phonenumber": "0592288622" ,
+    "invalidphonenumber":"879",
+    "invalidphonenumberMessage":""
   }
 
  

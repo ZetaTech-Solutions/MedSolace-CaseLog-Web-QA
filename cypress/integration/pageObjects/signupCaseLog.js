@@ -15,6 +15,11 @@ class signUp {
     phonenumberInput(){
         return cy.get('input[id="phone_number"]')
     }
+
+    SelectCountry(){
+
+    }
+    
     passwordInput(){
 
     }
