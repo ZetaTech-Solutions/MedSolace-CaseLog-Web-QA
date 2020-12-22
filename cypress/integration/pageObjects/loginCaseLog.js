@@ -1,34 +1,19 @@
 class login {
 
-    email() {
+     email() {
+          return cy.get('[data-testid="signin_email"]')
+     }
 
-         return cy.get('[data-testid="signin_email"]')
+     password() {
+          return cy.get('[data-testid="signin_password"]')
+     }
 
-    }
+     eyepassword(){
+          return cy.get('[data-testid="signin_password"]')
+     }
 
-    password() {
-
-         return cy.get('[data-testid="signin_password"]')
-
-    }
-
-    signInButton() {
-
-         return cy.get('[data-testid="signin_button"]')
-
-    }
-
-    logOutButton() {
-
-     return cy.get('[data-testid="logout_button"]')
-
- }
-
- okButton() {
-
-     return cy.get('.alert-container > .mat-focus-indicator')
- }
-
+     signInButton() {
+          return cy.get('[data-testid="signin_button"]')
+     }
 }
-
 export default login
