@@ -1,60 +1,46 @@
 class signUp {
 
-    accountTypeDropdown() {
+    firstNameInput(){
+        return cy.get('input[id="First_name"]')
+    }
 
-        return cy.get('mat-select[id="account_type"]')
+    lastNameInput(){
+        return cy.get('input[id="First_name"]')
+    }
+    
+    emailInput(){
+        return cy.get('input[id="email"]')
+    }
+
+    phonenumberInput(){
+        return cy.get('input[id="phone_number"]')
+    }
+    passwordInput(){
+
+    }
+    confirmPasswordInput(){
 
     }
 
-    distrebuterType() {
-
-        return cy.get('mat-option').contains('Distrebuter')
+    signUpButton(){
 
     }
 
-    manufacturerType() {
-
-        return cy.get('[value="manufacture"]')
-    }
-
-    companyNameInput(){
-
-        return cy.get('[data-testid="signup_company_name"]')
-    }
-
-    manufactureNameInput(){
-
-        return cy.get('[data-testid="signup_manufacture_name"]')
-    }
-
-    signUpEmail() {
-
-        return cy.get('[data-testid="signup_email"]')
+    backButoon(){
 
     }
 
-    signUpPassword() {
-
-        return cy.get('[data-testid="signup_password"]')
+    nextButton(){
 
     }
 
-    acceptCheckBox() {
+    backButton(){
 
-        return cy.get('.mat-checkbox-inner-container')
     }
 
-    signUpButton1() {
-
-        return cy.get(':nth-child(3) > .mat-focus-indicator').contains('Sign Up')
+    acceptButton(){
         
     }
 
-    signUpButton() {
-
-        return cy.get('[data-testid="signup_button"]')
-    }
-
 }
-
 export default signUp
