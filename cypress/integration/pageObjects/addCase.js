@@ -1,5 +1,5 @@
 class AddCase{
-
+    SelectAnyCase()
     AddCasebutton(){}
     PatientNameInput(){}
     GenderInput(){}
