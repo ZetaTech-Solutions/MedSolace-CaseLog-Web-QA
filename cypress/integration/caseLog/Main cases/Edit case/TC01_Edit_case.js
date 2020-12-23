@@ -1,6 +1,6 @@
 import Login from '../../../pageObjects/loginCaseLog'
 import AddCase from '../../../pageObjects/addcase'
-describe('Cases', function () {
+describe('Edit Case', function () {
     const login = new Login()
     it('cases', function () {
         cy.fixture('WebsiteUrl').then((url)=>{
@@ -19,11 +19,15 @@ describe('Cases', function () {
 
             // Add new case
             cy.fixture('caseDetailsCaseLog').then((user) => {
-                AddCase.AddCasebutton().click()
+                AddCase.patientNameInput().clear()
                 AddCase.patientNameInput().type(user.patientNameInput)
+                AddCase.genderInput().clear()
                 AddCase.genderInput().type(user.genderInput)
+                AddCase.dateOfBirthInput().clear()
                 AddCase.dateOfBirthInput().type(user.dateOfBirthInput)
+                AddCase.medicalRecordNumberInput().clear()
                 AddCase.medicalRecordNumberInput().type(user.medicalRecordNumberInput)
+                AddCase.institutionInput().clear()
                 AddCase.institutionInput().type(user.insuranceInput)
 
                 AddCase.AddDiagnosis().should('be.visible').click()
@@ -38,8 +42,11 @@ describe('Cases', function () {
                 AddCase.AddCPTCheckBox().should('be.visible').click()
                 AddCase.SaveCPT().should('be.visible').click()
 
+                AddCase.DateOfSurgeryInput().clear()
                 AddCase.DateOfSurgeryInput().type(user.dateOfSurgeryInput)
+                AddCase.InstitutionInput().clear()
                 AddCase.InstitutionInput().type(user.institutionInput)
+                AddCase.ProcedureTypeInput().clear()
                 AddCase.ProcedureTypeInput().type(user.procedureTypeInput)
                 AddCase.RoleInput().type(user.roleInput)
                 AddCase.FindingsInput().type(user.findingsInput)
