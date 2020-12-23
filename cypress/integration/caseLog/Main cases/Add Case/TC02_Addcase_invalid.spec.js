@@ -20,6 +20,7 @@ describe('Cases', function () {
             // Add new case
             cy.route('POST', '/api/v1/user/addcase').as('addcase')
             cy.fixture('caseDetailsCaseLog').then((user) => {
+                AddCase.AddCasebutton().click()
                 AddCase.patientNameInput().type(user.patientNameInputInvalid)
                 AddCase.genderInput().type(user.genderInputInvalid)
                 AddCase.dateOfBirthInput().type(user.dateOfBirthInputInvalid)
