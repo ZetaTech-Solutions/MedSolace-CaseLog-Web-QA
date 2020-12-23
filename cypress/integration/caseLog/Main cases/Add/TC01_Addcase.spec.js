@@ -60,56 +60,7 @@ describe('Cases', function () {
             cy.get('.alert-container > .mat-focus-indicator').should('be.visible').click()
             cy("").should('be.visible').click()
 
-            // Edit case
-            cy("").clear().type(user.patientNameInput1)
-            cy("").clear().type(user.genderInput1)
-            cy("").clear().type(user.dateOfBirthInput1)
-            cy("").clear().type(user.medicalRecordNumberInput1)
-            cy("").clear().type(user.insuranceInput1)
-            //Delete diagnises
-            cy("").should('be.visible').click()
-            cy("").should('be.visible').click()
-            //Delete cpt
-            cy("").should('be.visible').click()
-            cy("").should('be.visible').click()
-            cy("").clear().type(user.dateOfSurgeryInput1)
-            cy("").clear().type(user.institutionInput1)
-            cy("").clear().type(user.procedureTypeInput1)
-            cy("").clear().type(user.roleInput1)
-            cy("").clear().type(user.findingsInput1)
-            cy("").clear().type(user.complicationsInput1)
-            cy("").clear().type(user.outcomeInput)
-            cy("").should('be.visible').click()
-            cy("").should('be.visible').click()
-            cy("").should('be.visible').click()
-            cy("").should('be.visible').click()
-            cy("").clear().type(user.noteInput1)
-            //Delete image
-            cy("").should('be.visible').click()
-            cy("").should('be.visible').click()
-            cy.get('.alert-container > .mat-focus-indicator').should('be.visible').click()
-            cy("").should('be.visible').click()
-
-            // View case
-            cy("").should('be.visible').click()
-            cy.contains(user.patientNameInput1).should('be.visible')
-            cy.contains(user.genderInput1).should('be.visible')
-            cy.contains(user.dateOfBirthInput1).should('be.visible')
-            cy.contains(user.medicalRecordNumberInput1).should('be.visible')
-            cy.contains(user.insuranceInput1).should('be.visible')
-            cy.contains(user.dateOfSurgeryInput1).should('be.visible')
-            cy.contains(user.institutionInput1).should('be.visible')
-            cy.contains(user.procedureTypeInput1).should('be.visible')
-            cy.contains(user.roleInput1).should('be.visible')
-            cy.contains(user.findingsInput1).should('be.visible')
-            cy.contains(user.complicationsInput1).should('be.visible')
-            cy.contains(user.outcomeInput).should('be.visible')
-            cy.contains(user.noteInput1).should('be.visible')
-
-            // Delete case
-            cy("").should('be.visible').click()
-            cy("").should('be.visible').click()
-            cy.get('.alert-container > .mat-focus-indicator').should('be.visible').click()
+            
         })
 
     })
