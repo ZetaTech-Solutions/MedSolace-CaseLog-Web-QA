@@ -17,8 +17,9 @@ describe('Edit Case', function () {
             cy.url().should('include', 'dashboard')
         })
 
-            // Add new case
+            // Edit new case
             cy.fixture('caseDetailsCaseLog').then((user) => {
+                AddCase.SelectAnyCase().click()
                 AddCase.patientNameInput().clear()
                 AddCase.patientNameInput().type(user.patientNameInput)
                 AddCase.genderInput().clear()
