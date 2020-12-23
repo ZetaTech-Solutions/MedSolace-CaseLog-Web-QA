@@ -32,19 +32,10 @@ class profile {
         return cy.get('[data-testid="profile_last_name"]')
     }
 
-    categoryInput() {
-          return cy.get('[data-testid="profile_title"]')
-    }
-
-    npiInput() {
-        return cy.get('[data-testid="profile_title"]')
-    }
-
     phoneNumberInput() {
         return cy.get('[data-testid="profile_phone"]')
     }
    
-
     emailInput() {
         return cy.get('[data-testid="profile_email"]')
     }
