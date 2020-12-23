@@ -1,5 +1,5 @@
-import profile from '../pageObjectsCaseLog/profile'
-import Login from '../pageObjectsCaseLog/loginCaseLog'
+import profile from '../../pageObjects/profile'
+import Login from '../../pageObjects/loginCaseLog'
 
 describe('Profile', function () {
     const profileInfo = new profile()
@@ -18,7 +18,7 @@ describe('Profile', function () {
                 login.signInButton().click()
             })
 
-            cy.profileicon().should('be.visible').click()
+            profile.profileicon().should('be.visible').click()
             cy.url().should('include', 'profile')
             cy.fixture('profileDetailsCaseLog').then((user) => {
                 profileInfo.clickImage().click()    

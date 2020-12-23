@@ -4,6 +4,14 @@ class profile {
 
     }
 
+    editicon(){
+
+    }
+
+    changepasswordbutton(){
+        
+    }
+
     clickImage() {
         return cy.get('.profile-image')
     }
