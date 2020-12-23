@@ -1,4 +1,5 @@
-import forgetPassword from '../../pageObjectsCaseLog/forgetCaseLog'
+import forgetPassword from '../../pageObjects/forgetCaseLog'
+
 
 describe('Forget Password', function () {
     const forgetpassword = new forgetPassword()

@@ -1,4 +1,5 @@
-import Login from '../../pageObjectsCaseLog/loginCaseLog'
+import Login from '../../pageObjects/loginCaseLog'
+
 
 describe('search Filter', function () {
     const login = new Login()
