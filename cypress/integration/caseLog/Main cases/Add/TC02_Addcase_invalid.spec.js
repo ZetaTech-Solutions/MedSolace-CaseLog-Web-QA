@@ -51,7 +51,7 @@ describe('Cases', function () {
                 AddCase.AddNote().click()
                 AddCase.NoteInput2().type(user.noteInputInvalid)
                 AddCase.AddImage().attachFile(image)
-                AddCase.SaveButton().click()
+                AddCase.SaveButton().should('be.invisible')
             })
         })
     })
