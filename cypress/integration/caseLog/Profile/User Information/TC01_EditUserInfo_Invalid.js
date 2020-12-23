@@ -1,6 +1,6 @@
-import Login from '../../pageObjects/loginCaseLog'
-import ChangePassword from '../../pageObjects/changePassword'
-import profile from '../../pageObjects/profile'
+import Login from '../../../../pageObjects/loginCaseLog'
+import ChangePassword from '../../../../pageObjects/changePassword'
+import profile from '../../../../pageObjects/profile'
 
 describe('Change password', function () {
     const login = new Login()
@@ -29,9 +29,9 @@ describe('Change password', function () {
                 profile.lastNameInput().clear()
                 profile.lastNameInput().type(user.lastName)
                 profile.emailInput().clear()
-                profile.emailInput().type(user.Email)
+                profile.emailInput().type(user.invalidEmail)
                 profile.phonenumberInput().clear()
-                profile.phonenumberInput().type(user.phonenumber)
+                profile.phonenumberInput().type(user.invalidphonenumber)
                 profile.saveButton().click()
             })
             cy.wait('@changepassword').its('status').should('eq', 200)
