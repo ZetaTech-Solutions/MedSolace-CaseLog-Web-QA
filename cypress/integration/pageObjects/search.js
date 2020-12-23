@@ -29,5 +29,7 @@ class search{
 
     searchbutton(){
     }
+
+    exportbutton(){}
 }
 export default search
