@@ -1,7 +1,9 @@
 {
     "patientInfoInput":"",
     "institutionInput":"",
-    "cptInput":""
-    
-    }
+    "cptInput":"" ,
+    "patientInfoInputInvalid":"",
+    "institutionInputInvalid":"",
+    "cptInputInvaid":"" 
+}
     
