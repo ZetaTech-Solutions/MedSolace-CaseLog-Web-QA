@@ -34,5 +34,7 @@ class AddCase{
     SaveAddCPT(){}
     CancelAddCPT(){}
     SaveButton(){}
+    DeleteButton(){}
+    ConfirmDeleteCase(){}
 }
 export default AddCase
