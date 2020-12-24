@@ -23,7 +23,6 @@ describe('Edit current position', function () {
             cy.url().should('include', 'profile')
             cy.fixture('currentPositionDetailsCaseLog').then((user) => {
                 currentPostion.EditIcon().click()
-                currentPostion.CurrentPostionTab().clear();
                 currentPostion.CurrentPostionTab().click()
 
                 currentPostion.InstitutionInput().clear();
