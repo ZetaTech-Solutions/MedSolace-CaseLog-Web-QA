@@ -1,7 +1,7 @@
 import Login from '../../../../pageObjects/loginCaseLog'
 import Profile from '../../../../pageObjects/profile'
 
-describe('Add Experience', function () {
+describe('Logout', function () {
     const login = new Login()
     const profile = new Profile()
    
