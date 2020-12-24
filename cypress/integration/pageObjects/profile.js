@@ -46,5 +46,8 @@ class profile {
         return cy.get('[data-testid="profile_save_button"]')
     }
 
+    logouticon(){}
+    confirmLogOut(){}
+
 }
 export default profile
