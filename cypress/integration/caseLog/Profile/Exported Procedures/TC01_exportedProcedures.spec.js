@@ -1,29 +1,26 @@
-import Login from '../pageObjectsCaseLog/loginCaseLog'
+import Login from '../../../../pageObjects/loginCaseLog'
+import Profile from '../../../../pageObjects/profile'
 
-describe('Exported Procedure', function () {
+describe('Add Experience', function () {
     const login = new Login()
-    it('Exported Procedure', function () {
-        cy.server()
-        cy.route('POST', '/api/v1/user/Login').as('login')
+    const profile = new Profile()
    
-        cy.visit('http://')
+    it('Profile Information', function () {
+        cy.fixture('WebsiteUrl').then((url)=>{
+            cy.server()
+            cy.route('POST', '/api/v1/user/Login').as('login')
+            cy.visit(url.WebsiteUrl)
+            cy.fixture('userLoginDetailsCaseLog').then((user) => {
+                cy.contains("Welcome back!").should('be.visible')
+                login.email().type(user.email)
+                login.password().type(user.password)
+                login.signInButton().click()
+            })
 
-        cy.fixture('userLoginDetailsCaseLog').then((user) => {
-            login.signInButton().should('be.visible').click()
-            login.email().type(user.email)
-            login.password().type(user.password)
-            login.signInButton().eq(1).should('be.visible').click()
-            cy.wait('@login').its('status').should('eq', 200)
-            cy.wait(1000)
-            cy.url().should('include', 'dashboard')
+            profile.profileicon().click()
+            cy.url().should('include', 'profile')
+            profile.exportedProceduresTab().click()
+            cy.contains("")
         })
-        cy.get('[data-testid=profile_button]').should('be.visible').click()
-        cy.url().should('include', 'profile')
-
-            // Download file
-            cy("").should('be.visible').click()
-            cy("").should('be.visible').click()
-            
-        })
-        
     })
+})
