@@ -2,7 +2,7 @@ import CurrentPostion from '../../../../pageObjects/currentPostion'
 import Login from '../../../../pageObjects/loginCaseLog'
 import Profile from '../../../../pageObjects/profile'
 
-describe('Edit current position', function () {
+describe('Add current position', function () {
     const login = new Login()
     const currentPostion = new CurrentPostion()
     const profile = new Profile()
