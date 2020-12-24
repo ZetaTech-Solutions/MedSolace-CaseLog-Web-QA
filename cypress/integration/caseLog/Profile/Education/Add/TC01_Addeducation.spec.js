@@ -12,7 +12,7 @@ describe('Add Education', function () {
             cy.server()
             cy.route('POST', '/api/v1/user/Login').as('login')
             cy.visit(url.WebsiteUrl)
-            cy.fixture('educationDetailsCaseLog').then((user) => {
+            cy.fixture('userLoginDetailsCaseLog').then((user) => {
                 cy.contains("Welcome back!").should('be.visible')
                 login.email().type(user.email)
                 login.password().type(user.password)
@@ -21,7 +21,7 @@ describe('Add Education', function () {
 
             profile.profileicon().click()
             cy.url().should('include', 'profile')
-            cy.fixture('currentPositionDetailsCaseLog').then((user) => {
+            cy.fixture('educationDetailsCaseLog').then((user) => {
                 education.EducationTab().click()
                 education.Addicon().click()
                 

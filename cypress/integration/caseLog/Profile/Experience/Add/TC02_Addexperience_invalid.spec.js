@@ -12,7 +12,7 @@ describe('Add Experience Invalid', function () {
             cy.server()
             cy.route('POST', '/api/v1/user/Login').as('login')
             cy.visit(url.WebsiteUrl)
-            cy.fixture('educationDetailsCaseLog').then((user) => {
+            cy.fixture('userLoginDetailsCaseLog').then((user) => {
                 cy.contains("Welcome back!").should('be.visible')
                 login.email().type(user.email)
                 login.password().type(user.password)
