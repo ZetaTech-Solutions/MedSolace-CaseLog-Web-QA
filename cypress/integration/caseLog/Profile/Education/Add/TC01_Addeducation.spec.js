@@ -4,7 +4,7 @@ import Profile from '../../../../pageObjects/profile'
 
 describe('Add Education', function () {
     const login = new Login()
-    const educationn = new Education()
+    const education = new Education()
     const profile = new Profile()
    
     it('Profile Information', function () {
@@ -22,16 +22,16 @@ describe('Add Education', function () {
             profile.profileicon().click()
             cy.url().should('include', 'profile')
             cy.fixture('currentPositionDetailsCaseLog').then((user) => {
-                educationn.EducationTab().click()
-                educationn.Addicon().click()
+                education.EducationTab().click()
+                education.Addicon().click()
                 
-                educationn.InstitutionInput().type(user.institutionInput)   
-                educationn.SpecialityInput().type(user.specialityInput)
-                educationn.AddressInput().type(user.addressInput)
-                educationn.StartDateInput().type(user.startDateInput)
-                educationn.IcurrentlyworkinthisroleCheckBox().click()
+                education.InstitutionInput().type(user.institutionInput)   
+                education.SpecialityInput().type(user.specialityInput)
+                education.AddressInput().type(user.addressInput)
+                education.StartDateInput().type(user.startDateInput)
+                education.IcurrentlyworkinthisroleCheckBox().click()
                 
-                educationn.SaveButton()
+                education.SaveButton()
             })
         })
     })
