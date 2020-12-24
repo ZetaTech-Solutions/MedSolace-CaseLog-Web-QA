@@ -1,7 +1,12 @@
 {
-    "institutionInput": "test111",
-    "startDateInput": "hello@cypress.io",
-    "institutionInput1": "test111",
-    "startDateInput1": "hello@cypress.io"
-
-  }
+  "institutionInput": "test",
+  "specialityInput": "test",
+  "addressInput": "address",
+  "startDateInput": "11/12/2020",
+  
+  "institutionInputInvalid": "test",
+  "specialityInputInvalid": "test3",
+  "addressInputInvalid": "add12",
+  "startDateInputInvalid": "test",
+  "ErrorIndictors":""
+}
