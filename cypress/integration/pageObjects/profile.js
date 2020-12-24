@@ -8,6 +8,8 @@ class profile {
 
     }
 
+    exportedProceduresTab(){}
+
     changepasswordbutton(){
         
     }
