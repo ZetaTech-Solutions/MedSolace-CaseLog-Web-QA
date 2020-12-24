@@ -1,15 +1,13 @@
 {
-    "institutionInput": "test111",
-    "categoryInput": "test211",
-    "specialityInput": "test3111",
-    "addressInput": "jhuliuhjl",
-    "startDateInput": "hello@cypress.io",
-    "phoneNumberInput": "123456781111",
-    "institutionInput1": "test111",
-    "categoryInput1": "test211",
-    "specialityInput1": "test3111",
-    "addressInput1": "jhuliuhjl",
-    "startDateInput1": "hello@cypress.io",
-    "phoneNumberInput1": "123456781111"
+    "institutionInput": "test",
+    "specialityInput": "test",
+    "addressInput": "address",
+    "startDateInput": "11/12/2020",
+    
+    "institutionInputInvalid": "test",
+    "specialityInputInvalid": "test3",
+    "addressInputInvalid": "add12",
+    "startDateInputInvalid": "test",
+    "ErrorIndictors":""
 
   }
