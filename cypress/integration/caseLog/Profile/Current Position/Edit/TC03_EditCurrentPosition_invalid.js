@@ -22,9 +22,9 @@ describe('Edit current position', function () {
             profile.profileicon().click()
             cy.url().should('include', 'profile')
             cy.fixture('currentPositionDetailsCaseLog').then((user) => {
-                currentPostion.EditIcon().click()
                 currentPostion.CurrentPostionTab().click();
-
+                currentPostion.EditIcon().click()
+                
                 currentPostion.InstitutionInput().clear();
                 currentPostion.InstitutionInput().type(user.institutionInputInvalid)   
                 currentPostion.SpecialityInput().clear();

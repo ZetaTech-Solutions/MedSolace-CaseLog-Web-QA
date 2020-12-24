@@ -6,6 +6,7 @@ class CurrentPostion{
     AddressInput(){}
     StartDateInput(){}
     IcurrentlyworkinthisroleCheckBox(){}
+    Addicon(){}
     EditIcon(){}
     SaveButton(){}
     CancleButton(){}
