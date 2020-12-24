@@ -1,46 +1,33 @@
 import Login from '../../pageObjects/loginCaseLog'
+import search from '../../../pageObjects/search'
+import Profile from '../../../pageObjects/profile'
 
-
-describe('search Filter', function () {
+describe('ُExport Result', function () {
     const login = new Login()
+    const search = new search()
+    const profile = new profile()
     it('search Filter', function () {
         cy.fixture('WebsiteUrl').then((url)=>{
+            cy.fixture('userLoginDetailsCaseLog').then((user) => {
+                cy.visit(url.WebsiteUrl)
+                login.email().type(user.email)
+                login.password().type(user.password)
+                login.signInButton().eq(1).should('be.visible').click()
+                cy.wait('@login').its('status').should('eq', 200)
+            })
 
-        cy.fixture('userLoginDetailsCaseLog').then((user) => {
-            cy.visit(url.WebsiteUrl)
-            login.email().type(user.email)
-            login.password().type(user.password)
-            login.signInButton().eq(1).should('be.visible').click()
-            cy.wait('@login').its('status').should('eq', 200)
+            cy.fixture('searchDetailsCaseLog').then((user) => {
+                //patientInfo
+                search.searchinput().type(user.patientInfoInput)
+                search.searchbutton().click()
+                search.contains(user.patientInfoInput).should('be.visible').click()
+                search.exportbutton()
 
-            cy.wait(100)
-            cy.url().should('include', 'dashboard')
-            cy.get('[data-testid=profile_button]').should('be.visible').click()
-            cy.url().should('include', 'search')
+                profile.profileicon().click()
+                cy.url().should('include', 'profile')
+                profile.exportedProceduresTab().click()
+                cy.contains("")
+            })
         })
-
-        cy.fixture('searchDetailsCaseLog').then((user) => {
-            //patientInfo
-            cy.searchinput().type(user.patientInfoInput)
-            cy.searchbutton().click()
-            cy.contains(user.patientInfoInput).should('be.visible').click()
-            cy.exportbutton()
-
-            //Institution
-            cy.searchinput().clear()
-            cy.selectpatientInfobutton()
-            cy.searchinput().type(user.institutionInput)
-            cy.contains(user.patientInfoInput).should('be.visible').click()
-            cy.exportbutton()
-           
-            //cpt
-            cy.searchinput().clear()
-            cy.selectcptbutton()
-            cy.searchinput().type(user.cptInput)
-            cy.contains(user.cptInput).should('be.visible').click()
-            cy.exportbutton()
-        })
-    })
-
     })
 })
