@@ -1,10 +1,13 @@
 { 
-    "email": "raghad@tester.com",
-    "password": "1234@qwert",
+    "email": "test4@medsolace.com",
+    "password": "12345678",
     "invalid_email":"test",
+    "invalid_password":"677",
     "error_message_invaled_email":"12312312",
-    "invalid_email_message":"invalid_email_message",
-    "falied_login_message":"falied_login_message"
+    "invalid_email_message":"Must use valid email address",
+    "falied_login_message":"The user name or password you entered is incorrect! Please try again",
+    "Emailisrequired":"Email is required",
+    "passwordisrequired":"password is required"
   }
 
  
