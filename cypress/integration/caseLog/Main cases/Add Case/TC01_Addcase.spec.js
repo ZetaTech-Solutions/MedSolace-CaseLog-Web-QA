@@ -1,57 +1,65 @@
 import Login from '../../../pageObjects/loginCaseLog'
-import AddCase from '../../../pageObjects/addcase'
+import Case from '../../../pageObjects/Case'
 describe('Cases', function () {
+    const imagePath = 'OIP.jfif';
     const login = new Login()
-    it('cases', function () {
+    const AddCase= new Case()
+
+    it('Add new case', function () {
         cy.fixture('WebsiteUrl').then((url)=>{
         cy.server()
-        cy.route('POST', '/api/v1/user/Login').as('login')
+        cy.route('POST', '/api/v1/login').as('login')
+        cy.route('POST','/api/v1/users/*/procedures').as('addcase')
         cy.visit(url.WebsiteUrl)
         cy.fixture('userLoginDetailsCaseLog').then((user) => {
-            login.signInButton().should('be.visible').click()
             login.email().type(user.email)
             login.password().type(user.password)
-            login.signInButton().eq(1).should('be.visible').click()
+            login.signInButton().click()
             cy.wait('@login').its('status').should('eq', 200)
-            cy.wait(1000)
             cy.url().should('include', 'dashboard')
         })
-
             // Add new case
             cy.fixture('caseDetailsCaseLog').then((user) => {
                 AddCase.AddCasebutton().click()
-                AddCase.patientNameInput().type(user.patientNameInput)
-                AddCase.genderInput().type(user.genderInput)
-                AddCase.dateOfBirthInput().type(user.dateOfBirthInput)
-                AddCase.medicalRecordNumberInput().type(user.medicalRecordNumberInput)
-                AddCase.institutionInput().type(user.insuranceInput)
+                AddCase.PatientFirstNameInput().type(user.patientNameInput)
+                AddCase.PatientLastNameInput().type(user.patientNameInput)
+                AddCase.GenderInput().click()
+                AddCase.SelectGender().click()
+                AddCase.MedicalRecordNumberInput().type(user.medicalRecordNumberInput)
+                AddCase.InsuranceInput().type(user.insuranceInput)
+                AddCase.InstituionInput().click()
+                AddCase.SelectInstituion().click()
 
-                AddCase.AddDiagnosis().should('be.visible').click()
+                AddCase.AddDiagnosis().click()
                 AddCase.AddDiagnosisSearchInput().type(user.diagnosisSearchInput)
                 AddCase.AddDiagnosisSearchButton().click()
-                AddCase.AddDiagnosisCheckBox().should('be.visible').click()
-                AddCase.SaveDiagnosis().should('be.visible').click()
+                AddCase.AddDiagnosisCheckBox().click()
+                AddCase.SaveDiagnosis().click()
                 
-                AddCase.AddCPT().should('be.visible').click()
+                AddCase.AddCPT().click()
                 AddCase.AddCPTSearchInput().type(user.cptSearchInput)
                 AddCase.AddCPTSearchButton().click()
-                AddCase.AddCPTCheckBox().should('be.visible').click()
-                AddCase.SaveCPT().should('be.visible').click()
+                AddCase.AddCPTCheckBox().click()
+                AddCase.SaveCPT().click()
 
-                AddCase.DateOfSurgeryInput().type(user.dateOfSurgeryInput)
-                AddCase.InstitutionInput().type(user.institutionInput)
+                AddCase.InstituionInput().click()
+                AddCase.SelectInstituion().click()
                 AddCase.ProcedureTypeInput().type(user.procedureTypeInput)
-                AddCase.RoleInput().type(user.roleInput)
+                AddCase.RoleInput().click()
+                AddCase.SelectAnyRole().click()
                 AddCase.FindingsInput().type(user.findingsInput)
                 AddCase.ComplicationsInput().type(user.complicationsInput)
                 AddCase.OutcomeInput().type(user.outcomeInput)
-                AddCase.SelectFollowUp().should('be.visible')
-                AddCase.SelectDay()
+                AddCase.SelectFollowUp().click()
+                AddCase.SelectAnyFollowUp().click()
+                AddCase.PeriodInput().click()
+                AddCase.SelectDay().click()
                 AddCase.NoteInput().type(user.noteInput)
                 AddCase.AddNote().click()
-                AddCase.NoteInput2().type(user.noteInput)
-                AddCase.AddImage().attachFile(image)
+                AddCase.AddImage()
                 AddCase.SaveButton().click()
+
+                cy.wait('@addcase').its('status').should('eq', 200)
             })
         })
     })
