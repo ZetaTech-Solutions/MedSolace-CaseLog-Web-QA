@@ -1,7 +1,7 @@
-import signUp from '../../pageObjects/signupCaseLog'
+import Signup from '../../pageObjects/Signup'
 
 describe('Sign Up', function () {
-    const signup = new signUp()
+    const signup = new Signup()
     it('Sign Up', function () {
         cy.server()
         cy.route({
@@ -16,19 +16,17 @@ describe('Sign Up', function () {
                 signup.firstNameInput().type(user.firstName)
                 signup.lastNameInput().type(user.lastName)
                 signup.emailInput().type(user.invalidEmail)
-                cy.contains(user.invalidEmailMessage)
+               
                 signup.phonenumberInput().type(user.invalidphonenumber)
-                cy.contains(user.invalidEmailMessage)
                 signup.SelectCountry()
                 signup.passwordInput().type(user.invalidpassword)
-                cy.contains(user.wrongPasswordMessage).should('be.visible')
-                signup.confirmPasswordInput().type(user.wrongconfirmPassword)
-                cy.contains(user.wrongconfirmPasswordMessage)
-                signup.nextButton().should('be.invisible').click()
-            })
-            
-            cy.wait('@apiCheck').then((xhr) => {
-                assert.include(xhr.response.body.data, { isValid: true })
+                signup.nextButton().click()
+                 
+                //cy.contains(user.invalidEmailMessage)
+                // cy.contains(user.wrongPasswordMessage).should('be.visible')
+                // cy.contains(user.wrongconfirmPasswordMessage)
+                // cy.contains(user.invalidEmailMessage)
+                
             })
         })
     })

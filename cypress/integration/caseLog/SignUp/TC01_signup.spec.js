@@ -1,7 +1,7 @@
-import signUp from '../../pageObjects/signupCaseLog'
+import Signup from '../../pageObjects/Signup'
 
 describe('Sign Up', function () {
-    const signup = new signUp()
+    const signup = new Signup()
     it('Sign Up', function () {
         cy.server()
         cy.route({
@@ -19,11 +19,8 @@ describe('Sign Up', function () {
                 signup.phonenumberInput().type(user.phonenumber)
                 signup.SelectCountry().type(user.phonenumber)
                 signup.passwordInput().type(user.password)
-                signup.confirmPasswordInput().type(user.confirmPassword)
-                signup.nextButton().should('be.visible').click()
-                cy.contains("To continue، you’ll need to agree to the terms and conditions below.").should('be.visible')
-                signup.acceptButton().should('be.visible').click()
-                cy.contains("Please verify your account in order to complete your regestration").should('be.visible')
+                signup.nextButton().click()
+                //signup.acceptButton().should('be.visible').click()
             })
             
             cy.wait('@apiCheck').then((xhr) => {
