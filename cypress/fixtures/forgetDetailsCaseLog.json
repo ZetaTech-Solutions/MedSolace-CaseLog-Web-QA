@@ -1,8 +1,8 @@
 { 
-    "forgetEmail": "rawadeh@zetatechsolutions.com",
+    "forgetEmail": "shuaamunther123@gmail.com",
     "invalidForgetEmail": "kjashdb237465",
     "unUsedEmail": "ddd@gmail.com",
-    "unActiveEmail": "r7@gmail.com" 
+    "newPassword": "1234qwer",
+    "thisFiledIsReq":"Email is required",
+    "invalidEmail":"Must use valid email address"
   }
-
- 

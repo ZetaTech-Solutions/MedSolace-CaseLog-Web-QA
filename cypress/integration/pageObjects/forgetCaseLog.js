@@ -1,18 +1,19 @@
-class forgetPassword {
+class ForgetPassword {
 
-    forgetPasswordButton() {
-        return cy.get('[data-testid="forget_password_link"]')
+    ForgetPasswordButton() {
+        return cy.get('.MuiBox-root > .MuiTypography-root')
     }
 
     Email() {
-        return cy.get('[data-testid="forget_password_email"]')
+        return cy.get('.MuiInputBase-input')
     }
 
-    resetButton() {
-        return cy.get('[data-testid="forget_password_button"]')
+    ResetButton() {
+        return cy.get('.MuiButton-contained > .MuiButton-label')
     }
-   okButton() {
+
+    OkButton() {
         return cy.get('.alert-container > .mat-focus-indicator')
     }   
 }
-export default forgetPassword 
+export default ForgetPassword 
