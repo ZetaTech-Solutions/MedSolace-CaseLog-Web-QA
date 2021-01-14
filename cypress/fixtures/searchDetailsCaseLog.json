@@ -1,9 +1,9 @@
 {
-    "patientInfoInput":"",
-    "institutionInput":"",
-    "cptInput":"" ,
-    "patientInfoInputInvalid":"",
-    "institutionInputInvalid":"",
-    "cptInputInvaid":"" 
+    "patientInfoInput":"shuaa",
+    "institutionInput":"Nablus",
+    "cptInput":"Cholera" ,
+    "patientInfoInputInvalid":"fgs",
+    "institutionInputInvalid":"sdf",
+    "cptInputInvaid":"sdf" 
 }
     
