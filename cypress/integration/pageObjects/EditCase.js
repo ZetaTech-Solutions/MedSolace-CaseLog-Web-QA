@@ -9,11 +9,11 @@ class Case{
     }
 
     PatientFirstNameInput(){
-        return cy.get('.jss65 > .MuiPaper-root > .MuiBox-root > :nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss103 > .MuiPaper-root > .MuiBox-root > :nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     PatientLastNameInput(){
-        return cy.get('.jss65 > .MuiPaper-root > .MuiBox-root > :nth-child(1) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss103 > .MuiPaper-root > .MuiBox-root > :nth-child(1) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
     
     GenderInput(){
@@ -25,7 +25,7 @@ class Case{
     }
 
     DateofBirth(){
-        return cy.get('.jss60 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss98 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     SelectDateOfBirth(){
@@ -33,11 +33,11 @@ class Case{
     }
 
     MedicalRecordNumberInput(){
-        return cy.get('.jss65 > .MuiPaper-root > .MuiBox-root > :nth-child(2) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss103 > .MuiPaper-root > .MuiBox-root > :nth-child(2) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     InsuranceInput(){
-        return cy.get('.jss65 > .MuiPaper-root > .MuiBox-root > :nth-child(2) > :nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss103 > .MuiPaper-root > .MuiBox-root > :nth-child(2) > :nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     DateofSurgery(){
@@ -57,7 +57,7 @@ class Case{
     }
 
     ProcedureTypeInput(){
-        return cy.get('.jss79 > .MuiPaper-root > .MuiBox-root > :nth-child(1) > :nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss117 > .MuiPaper-root > .MuiBox-root > :nth-child(1) > :nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     RoleInput(){
@@ -69,15 +69,15 @@ class Case{
     }
 
     FindingsInput(){
-        return cy.get('.jss79 > .MuiPaper-root > .MuiBox-root > :nth-child(2) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss117 > .MuiPaper-root > .MuiBox-root > :nth-child(2) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     ComplicationsInput(){
-        return cy.get('.jss79 > .MuiPaper-root > .MuiBox-root > :nth-child(2) > :nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss117 > .MuiPaper-root > .MuiBox-root > :nth-child(2) > :nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     OutcomeInput(){
-        return cy.get('.jss79 > .MuiPaper-root > .MuiBox-root > :nth-child(3) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get(':nth-child(3) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     SelectFollowUp(){
@@ -97,11 +97,11 @@ class Case{
     }
 
     NoteInput(){
-        return cy.get('.jss85 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss123 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     AddNote(){
-        return cy.get('.jss86 > .MuiSvgIcon-root > path')
+        return cy.get('.jss124 > .MuiSvgIcon-root > path')
     }
 
     AddImage(){
@@ -109,23 +109,23 @@ class Case{
     }
 
     AddDiagnosis(){
-        return cy.get('.jss73 > .MuiSvgIcon-root')
+        return cy.get('.jss111 > .MuiSvgIcon-root')
     }
 
     AddDiagnosisSearchInput(){
-        return cy.get('.jss99 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss145 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     AddDiagnosisSearchButton(){
-        return cy.get('.jss99 > .MuiButtonBase-root')
+        return cy.get('.jss145 > .MuiButtonBase-root')
     }
 
     AddDiagnosisCheckBox(){
-        return cy.get('.jss106').first()
+        return cy.get('.jss172').first()
     }
 
     SaveDiagnosis(){
-        return cy.get('.jss100 > .MuiButton-contained')
+        return cy.get('.jss146 > .MuiButton-contained')
     }
 
     CancelDiagnosis(){
@@ -133,15 +133,15 @@ class Case{
     }
 
     AddCPT(){
-        return cy.get('.jss77 > .MuiSvgIcon-root > path')
+        return cy.get('.jss115 > .MuiSvgIcon-root > path')
     }
 
     AddCPTSearchInput(){
-        return cy.get('.jss174 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get('.jss219 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
 
     AddCPTSearchButton(){
-        return cy.get('.jss174 > .MuiButtonBase-root')
+        return cy.get('.jss219 > .MuiButtonBase-root')
     }
 
     AddCPTCheckBox(){
@@ -149,7 +149,7 @@ class Case{
     }
     
     SaveCPT(){
-        return cy.get('.jss175 > .MuiButton-contained')
+        return cy.get('.jss220 > .MuiButton-contained')
     }
 
     CancelAddCPT(){
@@ -169,7 +169,7 @@ class Case{
     }
 
     EditButton(){
-        return cy.get('')
+        return cy.get('.jss54 > .MuiBox-root > :nth-child(2) > path')
     }
 }
 export default Case
